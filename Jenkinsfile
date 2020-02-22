@@ -1,5 +1,8 @@
 // Jenkinsfile
 String credentialsId = 'awsCredentials'
+tools {
+        "org.jenkinsci.plugins.terraform.TerraformInstallation" "Terraform"
+    }
 
 try {
   stage('checkout') {
