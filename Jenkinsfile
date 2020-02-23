@@ -1,8 +1,8 @@
 // Jenkinsfile
+String credentialsId = 'awsCredentials'
 tools {
   Terraform 'Terraform'
 }
-String credentialsId = 'awsCredentials'
 
 try {
   stage('checkout') {
