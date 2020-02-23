@@ -1,8 +1,5 @@
 // Jenkinsfile
 String credentialsId = 'awsCredentials'
-tools {
-  Terraform 'Terraform'
-}
 
 try {
   stage('checkout') {
@@ -15,6 +12,9 @@ try {
   // Run terraform init
   stage('init') {
     node {
+      tools {
+  Terraform 'Terraform'
+}
       withCredentials([[
         $class: 'AmazonWebServicesCredentialsBinding',
         credentialsId: credentialsId,
