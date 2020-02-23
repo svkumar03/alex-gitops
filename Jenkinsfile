@@ -12,10 +12,7 @@ try {
   // Run terraform init
   stage('init') {
     node {
-      tools {
-  Terraform 'Terraform'
-}
-      withCredentials([[
+        withCredentials([[
         $class: 'AmazonWebServicesCredentialsBinding',
         credentialsId: credentialsId,
         accessKeyVariable: 'AWS_ACCESS_KEY_ID',
