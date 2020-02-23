@@ -1,9 +1,4 @@
 // Jenkinsfile
-agent any
-    tools {
-        "org.jenkinsci.plugins.terraform.TerraformInstallation" "Teraform"
-    }
-
 String credentialsId = 'awsCredentials'
 
 try {
