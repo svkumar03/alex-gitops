@@ -1,4 +1,7 @@
 // Jenkinsfile
+tools {
+  Terraform 'Terraform'
+}
 String credentialsId = 'awsCredentials'
 
 try {
