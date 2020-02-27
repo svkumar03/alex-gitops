@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 # Create EC2 instance
-resource "aws_instance" "Piple-EC2" {
+resource "aws_instance" "default" {
   ami                    = var.ami
   count                  = var.instance_count
   //key_name               = var.key_name
